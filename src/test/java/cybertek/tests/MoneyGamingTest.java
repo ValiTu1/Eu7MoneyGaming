@@ -39,6 +39,8 @@ public class MoneyGamingTest extends TestBase {
         //Submit the form by clicking the JOIN NOW button
         registrationPage.joinnowBtn.click();
 
+        //Validate that a validation message with text ‘ This field is required’ appears under the date of
+        //birth box
         BrowserUtils.waitForVisibility(registrationPage.requiredField, 10);
 
         Assert.assertTrue(registrationPage.requiredField.isDisplayed());
